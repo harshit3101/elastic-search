@@ -7,11 +7,11 @@ async function addDocument(){
     client.index({  
         index: 'gov',
         body: {
-          "ConstituencyName": "Tony",
-          "ConstituencyID": "E14000762",
+          "ConstituencyName": "Tony kakkar",
+          "ConstituencyID": "22323",
           "ConstituencyType": "Borough",
           "Electorate": 74499,
-          "ValidVotes": 4833443694,
+          "ValidVotes": 553,
         }
       }).then(
         ...handlers

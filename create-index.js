@@ -3,7 +3,7 @@ var client = require('./es-connection.js');
 async function createIndex(){
 
     const index = await client.indices.create({
-        index: 'testindex' //lowercase only
+        index: 'gov'
     });
 
     console.log('Harshit success');
