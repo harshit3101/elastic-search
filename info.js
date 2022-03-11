@@ -16,17 +16,20 @@ async function run () {
   //   id: 1
   // })
 
+  const health = await client.cluster.health();
+  console.log(health)
+
   // console.log(exists) // true
 
   // const test = await client.cat.indices({format: 'json'});
   // console.log(test)
 
-  const test2 = await client.get({
-      index: 'gov',
-      id: 1
-    });
+  // const test2 = await client.get({
+  //     index: 'gov',
+  //     id: 1
+  //   });
 
-  console.log(test2)
+  // console.log(test2)
 }
 
 run().catch(console.log)
