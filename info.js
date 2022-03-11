@@ -17,12 +17,14 @@ async function run () {
   // })
 
   const health = await client.cluster.health();
+  console.log('Harshit ES Health');
   console.log(health)
 
   // console.log(exists) // true
 
-  // const test = await client.cat.indices({format: 'json'});
-  // console.log(test)
+  const test = await client.cat.indices({format: 'json'});
+  console.log('Harshit ES index');
+  console.log(test)
 
   // const test2 = await client.get({
   //     index: 'gov',

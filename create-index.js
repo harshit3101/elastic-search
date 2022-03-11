@@ -6,6 +6,7 @@ async function createIndex(){
         index: 'testindex' //lowercase only
     });
 
+    console.log('Harshit success');
     console.log(index);
 
     //{ acknowledged: true, shards_acknowledged: true, index: 'testindex' }
