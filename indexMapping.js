@@ -6,13 +6,15 @@ async function createIndex(){
 
     const index = await client.indices.putMapping({
         index: 'mongo-users',
-        properties: {
-            username: {
-                type: "keyword"
-            },
-            location: {
-                type: "geo_point"
-            }
+        body: {
+            properties: {
+                username: {
+                    type: "keyword"
+                },
+                location: {
+                    type: "geo_point"
+                }
+        }
         }
 
     });

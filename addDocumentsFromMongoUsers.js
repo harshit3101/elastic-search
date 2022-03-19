@@ -24,8 +24,7 @@ async function addDocument(operations){
 
     if(operations.length > 0){
         client.bulk({  
-            refresh: true,
-            operations 
+            body: operations 
           }).then(
             ...handlers
         ).finally(

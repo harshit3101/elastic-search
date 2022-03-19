@@ -14,9 +14,19 @@ async await -> https://github.com/harshit3101/elastic-search/blob/main/delete-do
 ## Installation 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/zip-windows.html
 
+Or If you love cloud, follow below or skip to next step.
+
+Provision a free cluster in sanbox envrionment 
+https://app.bonsai.io/login
+
+At this time: version of cluster is "7.10.2",
+If you start different version then please update "@elastic/elasticsearch": "7.10"  version in package.json for avoiding client compataibility issues.
+
 ## Commands to get started
 
 start ES cluster in local host (update es-connection for any other server)
+
+(for bonsai add connection string into Envrionment variable 'BONSAI_ELASTIC_SEARCH_CONNECTION_STRING' )
 
 after running you will get password 
 
