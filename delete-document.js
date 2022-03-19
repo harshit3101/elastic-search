@@ -2,6 +2,7 @@ const client = require('./es-connection.js');
 const handlers = require('./errorHandle.js');
 
 
+const index_name = "mongo-users";
 
 async function deleteDocument(){
 
@@ -10,10 +11,10 @@ async function deleteDocument(){
     try {
 
         let res = await client.search({
-            index: 'gov',
+            index: index_name,
             query: {
                 match: {
-                    ConstituencyID: 'E14000761'
+                    id: 1
                 }
             }
         });
@@ -35,10 +36,10 @@ async function deleteDocument(){
 
 if(id_to_be_deleted){
 
-    console.log("Harshit ES delete document with"+ id_to_be_deleted);
+    console.log("Harshit ES delete document with "+ id_to_be_deleted);
 
     const doc = await client.get({
-        index: 'gov',
+        index: index_name,
         id: id_to_be_deleted
     });
 
@@ -46,7 +47,7 @@ if(id_to_be_deleted){
             
     
    client.delete({  
-        index: 'gov',
+        index: index_name,
         id: id_to_be_deleted
       }).then(
         ...handlers

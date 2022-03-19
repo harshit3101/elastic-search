@@ -5,10 +5,10 @@ var client = require('./es-connection.js');
 async function createIndex(){
 
     const index = await client.indices.putMapping({
-        index: 'gov',
+        index: 'mongo-users',
         properties: {
-            ConstituencyName: {
-                type: 'keyword'
+            username: {
+                type: "keyword"
             },
             location: {
                 type: "geo_point"

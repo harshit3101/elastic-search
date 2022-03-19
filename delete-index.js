@@ -4,7 +4,7 @@ async function deleteIndex(){
 
     try {
         const index = await client.indices.delete({
-            index: 'gov' //lowercase only
+            index: 'mongo-users' //lowercase only
         });
     
         console.log('Harshit success');
