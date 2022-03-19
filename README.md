@@ -1,3 +1,5 @@
+# Elastic search hosted in cloud for free example
+https://github.com/harshit3101/elastic-search/tree/bonsai_v_7_10
 
 
 # Elastic search basic functions in js with different js handling styles such as Promises, async await, callback.
@@ -28,7 +30,7 @@ Clone the code
 
 2) execute different scripts and play
 
-#### EXample:
+#### Example:
 node info.js
  
 
