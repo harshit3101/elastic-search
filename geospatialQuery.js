@@ -13,7 +13,7 @@ async function queryString(){
                         bool: {
                             filter: {
                                 geo_distance : {
-                                    distance: '10km',
+                                    distance: '200km',
                                     location: {
                                         lat: '28.332862',
                                         lon: '77.339506'

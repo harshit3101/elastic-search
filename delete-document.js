@@ -12,9 +12,11 @@ async function deleteDocument(){
 
         let res = await client.search({
             index: index_name,
-            query: {
-                match: {
-                    id: 1
+            body: {
+                query: {
+                    match: {
+                        username: 'Harshit'
+                    }
                 }
             }
         });
@@ -25,7 +27,7 @@ async function deleteDocument(){
         console.log(res);
 
     
-        id_to_be_deleted = res?.hits?.hits[0]?._id;
+        id_to_be_deleted = res?.body?.hits?.hits[0]?._id;
         
         
     } catch (error) {
@@ -37,15 +39,7 @@ async function deleteDocument(){
 if(id_to_be_deleted){
 
     console.log("Harshit ES delete document with "+ id_to_be_deleted);
-
-    const doc = await client.get({
-        index: index_name,
-        id: id_to_be_deleted
-    });
-
-    console.log(doc);
-            
-    
+     
    client.delete({  
         index: index_name,
         id: id_to_be_deleted
